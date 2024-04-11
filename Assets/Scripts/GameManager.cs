@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
         replayButton.SetActive(false);
         gameOver.SetActive(false);
 
+        // Remove the last game pipes
         Pipes[] pipes = FindObjectsOfType<Pipes>();
 
         for (int i = 0; i < pipes.Length; i++)
@@ -102,7 +103,6 @@ public class GameManager : MonoBehaviour
     {
         score++;
         scoreText.text = score.ToString();
-        
     }
 
     // Start is called before the first frame update
